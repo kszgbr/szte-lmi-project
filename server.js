@@ -9,7 +9,7 @@ var router = express.Router();
 /*******************************************************************************
 App config
 ********************************************************************************/
-var PORT = 8080;
+var port = process.env.PORT || 8080;
 
 // app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(bodyParser.json());
@@ -34,6 +34,6 @@ app.get('/', function (req, res) {
 /*******************************************************************************
 Start the server
 ********************************************************************************/
-app.listen(PORT, function () {
-    console.log('Magic happens on port ' + PORT);
+app.listen(port, function () {
+    console.log('Magic happens on port ' + port);
 });
