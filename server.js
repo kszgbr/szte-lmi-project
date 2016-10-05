@@ -11,26 +11,26 @@ App config
 ********************************************************************************/
 var port = process.env.PORT || 8080;
 
-// app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 /*******************************************************************************
 Middlewares
 ********************************************************************************/
-// router.use(function(req, res, next){
-//     console.log("some request has been processed");
-//     next();
-// });
+router.use(function(req, res, next){
+    console.log("some request has been processed");
+    next();
+});
 /*******************************************************************************
 Routes
 ********************************************************************************/
-app.get('/', function (req, res) {
-    res.send("it's alive!");
-});
-// router.get('/test', function(req, res) {
-//     res.json({ message: "it's alive!" });
+// app.get('/', function (req, res) {
+//     res.send("it's alive!");
 // });
-//
-// app.use('/api', router);
+router.get('/test', function(req, res) {
+    res.json({ message: "it's alive!" });
+});
+
+app.use('/api', router);
 /*******************************************************************************
 Start the server
 ********************************************************************************/
