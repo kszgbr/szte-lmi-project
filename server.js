@@ -27,7 +27,7 @@ Routes
 //     res.send("it's alive!");
 // });
 router.get('/test', function(req, res) {
-    res.json({ message: "it's alive!" });
+    res.json({ message: "Hello continuous delivery" });
 });
 
 app.use('/api', router);
